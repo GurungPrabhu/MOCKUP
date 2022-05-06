@@ -1,13 +1,54 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "react-toastify/dist/ReactToastify.css";
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 16px;
+}
+h2 {
+  font-size: 1.22rem;
+  font-weight: 600;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: auto;
+  height: 100%;
+}
+
+/* Product Page CSS Start */
+.product-list {
+  width: min(60rem, 100%);
+  margin: 1rem auto 4rem auto;
+}
+.btn-load-more {
+  width: fit-content;
+}
+/* Product Page CSS End */
+
+.btn-link {
+  text-decoration: none;
+}
+
+.btn-link:focus {
+  text-decoration: none;
+  box-shadow: none;
 }
