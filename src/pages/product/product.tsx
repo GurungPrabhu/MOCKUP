@@ -44,7 +44,7 @@ const ProductPage: React.FC = () => {
         <div className="d-flex justify-content-center">
           <button
             type="button"
-            className="btn btn-link btn-load-more"
+            className="btn-link btn btn-load-more"
             onClick={handleLoadMore}
           >
             Load More
