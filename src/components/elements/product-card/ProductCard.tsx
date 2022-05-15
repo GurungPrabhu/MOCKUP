@@ -12,7 +12,7 @@ const ProductCard: React.FC<IProductProps> = ({ data }) => (
     <OverlayTrigger
       placement="top"
       overlay={
-        <Tooltip>{`ingredients: ${String(
+        <Tooltip>{`Ingredients: ${String(
           data.ingredients?.join(",")
         )}`}</Tooltip>
       }

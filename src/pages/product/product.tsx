@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { ProductCard } from "../../components";
 import { IProduct } from "../../interfaces";
@@ -12,7 +13,7 @@ const ProductPage: React.FC = () => {
   const [pageNo, setPageNo] = useState(PAGE_NO);
   const [products, setProducts] = useState<IProduct[]>([]);
 
-  const { data } = useQuery<IProduct[]>(
+  const { data, isLoading } = useQuery<IProduct[]>(
     ["products", pageNo, DATA_COUNT],
     getProducts,
     {
@@ -42,13 +43,17 @@ const ProductPage: React.FC = () => {
           ))}
         </div>
         <div className="d-flex justify-content-center">
-          <button
-            type="button"
-            className="btn-link btn btn-load-more"
-            onClick={handleLoadMore}
-          >
-            Load More
-          </button>
+          {isLoading ? (
+            <Spinner animation="border" variant="primary" />
+          ) : (
+            <button
+              type="button"
+              className="btn-link btn btn-load-more"
+              onClick={handleLoadMore}
+            >
+              Load More
+            </button>
+          )}
         </div>
       </div>
     </div>
